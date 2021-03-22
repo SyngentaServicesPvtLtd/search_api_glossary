@@ -1,0 +1,13 @@
+# Config schema for glossary, you can find the implementation in
+# Drupal\search_api_glossary\Plugin\facets\widget\GlossaryAZWidget. Options for
+# this widget are "enable default theme limit" and "show count".
+facet.widget.config.glossaryaz:
+  type: config_entity
+  label : 'Glossary A-Z Facet configuration'
+  mapping:
+    show_count:
+      type: integer
+      label: 'Show count per Glossary item'
+    enable_default_theme:
+      type: integer
+      label: 'Use default Glossary AZ Theme'

@@ -1,0 +1,28 @@
+# Definition for Glossary processor
+
+# You can find the implementation in
+# Drupal\search_api_glossary\Plugin\search_api\processor\Glossary
+
+plugin.plugin_configuration.search_api_processor.glossary:
+  type: search_api.default_processor_configuration
+  label : 'Glossary A-Z processor configuration'
+  mapping:
+    glossarytable:
+      type: string
+      label: 'Serialized Glossary Field Groupings'
+    field_enabled:
+      type: integer
+      label: 'Field enabled'
+    grouping_defaults:
+      type: mapping
+      label: 'Grouping Defaults'
+      mapping:
+        grouping_other:
+          type: string
+          label: 'Group Others under #'
+        grouping_az:
+          type: string
+          label: 'Group those which start with an alpha under A-Z'
+        grouping_09:
+          type: string
+          label: 'Group those which start with a digital under 0-9'
